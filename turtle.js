@@ -108,7 +108,7 @@ function draw() {
         turtleContext.fill();
         turtleContext.restore();
     }
-    turtleContext.drawImage(imageCanvas, 0, 0, 300, 300, 0, 0, 300, 300);
+    turtleContext.drawImage(imageCanvas, 0, 0, 500, 500, 0, 0, 500, 500);
 }
 
 // clear the display, don't move the turtle
@@ -346,10 +346,15 @@ document.getElementById("command").addEventListener("keydown", (e) => {
     }
 }, false);
 
+document.querySelector('#resetButton').addEventListener('click', function() {
+    reset();
+});
+
 // Execute the program when the command box is changed
 // (when the user presses enter)
-document.querySelector('#command').addEventListener('change', function() {
-    var commandText = this.value;
+document.querySelector('#runButton').addEventListener('click', function() {
+    var commandBox = document.querySelector('#command')
+    var commandText = commandBox.value;
     commandList.push(commandText);
     var definitionsText = document.querySelector('#definitions').value;
     try {
@@ -362,12 +367,28 @@ document.querySelector('#command').addEventListener('change', function() {
         throw e;
     } finally {
         // clear the command box
-        this.value = '';
+        commandBox.value = '';
     }
 });
 
-document.querySelector('#resetButton').addEventListener('click', function() {
-    reset();
-});
+// Execute a function when the user presses a key on the keyboard
+document.querySelector('#command').addEventListener("keypress", function(event) {
+    // If the user presses the "Enter" key on the keyboard
+    if (event.keyCode == 13) {
+      // Cancel the default action, if needed
+      event.preventDefault();
+      // Trigger the button element with a click
+      if (!event.shiftKey) {
+        document.querySelector('#resetButton').click();
+      }
+      document.querySelector('#runButton').click();
+    }
+    if (event.keyCode == 13 && !event.shiftKey) {
+        // Cancel the default action, if needed
+        event.preventDefault();
+        // Trigger the button element with a click
+        document.querySelector('#runButton').click();
+      }
+  });
 
 reset();

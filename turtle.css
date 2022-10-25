@@ -15,17 +15,17 @@ body h1 {
 
 #leftcolumn {
    float:left;
-   width:30%;
+   width:20%;
 }
 
 #midcolumn {
    float:left;
-   width:35%;
+   width:50%;
 }
 
 #rightcolumn {
    float:right;
-   width:35%;
+   width:30%;
 }
 
 #turtlecanvas {
