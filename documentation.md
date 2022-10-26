@@ -46,7 +46,7 @@ forward(100)
 
 ### left()
 
-Turtle turn left by given degree, if we write 30 between parentheses, than turtle will turn by 30 degrees.
+Turtle turns left by given degree, if we write 30 between parentheses, than turtle will turn by 30 degrees.
 
 left(degrees)
 
@@ -97,6 +97,9 @@ You can play with it [here.](https://www.geogebra.org/m/TzAjZFst)
 
 Same as in left but to right :)
 
+### angle()
+
+Same as in left and right, but the turtle turns to an angle relative to 0 degrees, rather than relative to its current position
 
 ### width()
 
@@ -124,35 +127,6 @@ forward(100)
 ###### Result
 
 ![](width.gif)
-
-### color()
-
-Sets color of next lines
-
-color(r, g, b, a)
-
-**arguments**
-
-int: r, g, b, a (RGB)  
-
-###### Example
-
-```javascript
-color(255,15,20,1)
-forward(100)
-
-color(12,250,65,1)
-forward(60)
-
-color(89,100,36,1)
-forward(120)
-```
-
-You can [pick colors from here](https://rgbacolorpicker.com/)
-
-###### Result
-
-![](color_rgb.gif)
 
 ### goto()
 
@@ -183,6 +157,37 @@ forward(120)
 ###### Result
 
 ![](goto.gif)
+
+### colour()
+
+Sets color of next lines
+
+colour(r, g, b, a)
+
+**arguments**
+
+int: r, g, b, a (RGB)  
+
+###### Example
+
+```javascript
+color(255,15,20,1)
+forward(100)
+
+color(12,250,65,1)
+forward(60)
+
+color(89,100,36,1)
+forward(120)
+```
+
+You can [pick colors from here](https://rgbacolorpicker.com/)
+
+###### Result
+
+![](color_rgb.gif)
+
+
 
 ### penup() & pendown()
 
@@ -229,3 +234,31 @@ no arguments
 ```javascript
 clear()
 ```
+
+### reset()
+
+Clear all canvas and move the turtle to its starting position and angle.
+
+### shape()
+
+Turtle draws a shape, currently supports `"triangle"` (default), `"circle"`, `"square"` and `"turtle"`
+
+### write(string)
+
+Write some text at the turtle position.
+
+### random(low,high)
+
+Returns a random number between `low` and `high`
+
+### hideTurtle() & showTurtle()
+
+Makes the turtle visible or invisible
+
+### wrap(bool)
+
+Turn edge wrapping on/off
+
+### animate(function, ms)
+
+Runs the given callback 'function' every `ms` milliseconds
