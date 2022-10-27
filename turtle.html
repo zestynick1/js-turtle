@@ -1,12 +1,12 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 <html>
    <head>
-      <title>Javascript Turtle</title>
+      <title>Javascript Turtle Sandbox</title>
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
       <link type="text/css" rel="stylesheet" href="turtle.css" />
    </head>
    <body>
-         <h1>Javascript Turtle Graphics</h1>
+         <h1>Javascript Turtle Sandbox</h1>
          <div class="container">
             <div class="row">
          <div class="col-3 ">
@@ -29,7 +29,15 @@
               hideTurtle() <br/>
               showTurtle() <br/>
               wrap(bool) <br/>
-              animate(function,ms) <br/>
+              animate(function,ms) <br/> <br/>
+            </code>
+            <h4>Example Scripts</h4>
+            <code>
+               examples/bounce.js <br/>
+               examples/clock.js <br/>
+               examples/randstripe.js <br/>
+               examples/sierpinski.js <br/>
+               examples/spiral.js
             </code>
          </div> <!-- leftcolumn -->
          <div class="col-sm">
@@ -37,10 +45,18 @@
             <canvas id="turtlecanvas" width="500" height="500"></canvas>
             <canvas id="imagecanvas" width="500" height="500" style="display:none"></canvas>
             <h4>Command</h4>
-               <input type="text" id="command" value="main()"/>
+               <input type="text" style="width:300px;" id="command" value="demo()"/>
 	    <br/>
-       <button id="runButton" type="button" class="btn btn-success">Run</button>
-	    <button id="resetButton" type="button" class="btn btn-danger">Reset</button>
+       <button id="runButton" type="button" class="btn btn-success">Run Command</button>
+	    <button id="resetButton" type="button" class="btn btn-danger">Reset Canvas</button><br>
+       <br>
+       <h4>Script</h4>
+       <input type="text" id="scriptName" style="width:300px;" value="myscript.js"/>
+       
+       <br>
+       <button id="runMyScript" type="button" class="btn btn-warning">Load Script</button>
+       <button onclick="main()" type="button" class="btn btn-success">Run Script</button>
+
 
          </div> <!-- midcolumn -->
          <div class="col-3">
@@ -56,7 +72,7 @@ function square(side) {
    });
 }
 
-function main() {
+function demo() {
    hideTurtle();
    colour(0,0,255,1);
    for(s = 100; s > 0; s -= 10) {
@@ -69,5 +85,17 @@ function main() {
       </div>
       </div> <!-- wrap-->
       <script type="text/javascript" src="turtle.js"></script>
+      <script type="text/javascript">
+         
+         document.querySelector('#runMyScript').onclick = function(){
+             var scriptName = document.querySelector('#scriptName').value;
+             var script = document.createElement("script");
+             script.type = "text/javascript";
+             console.log(scriptName);
+             script.src = scriptName; 
+             console.log(script);
+             document.getElementsByTagName("body")[0].appendChild(script);         
+         }
+      </script>
    </body>
 </html>

@@ -3,8 +3,11 @@
 function fun(count) {
    while (count-- > 0)
    {
-      var x = random(-150, 150);
-      var y = random(-150, 150);
+      canvas = document.getElementById('turtlecanvas')
+      var canvasWidth = canvas.width
+      var canvasHeight = canvas.height   
+      var x = random(-canvasWidth/2, canvasWidth/2);
+      var y = random(-canvasHeight/2, canvasHeight/2);
       goto(x,y);
       var r = random(0, 255);
       var g = random(0, 255);
@@ -16,7 +19,7 @@ function fun(count) {
    }
 }
 
-function demo(count) {
+function main(count=5) {
    hideTurtle();
    redrawOnMove(false);
    fun(count);

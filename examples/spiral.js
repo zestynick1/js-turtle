@@ -1,5 +1,9 @@
 // randomly spaced spirals
 
+canvas = document.getElementById('turtlecanvas')
+var canvasWidth = canvas.width
+var canvasHeight = canvas.height
+
 function spiral(steps,angle) {
    widthInc = 5 / steps;
    distInc = 10 / steps;
@@ -15,13 +19,13 @@ function spiral(steps,angle) {
 function fun(count) {
    while (count-- > 0) {
       colour(random(0,255), random(0,255), random(0,255), Math.random());
-      goto(random(-150,150), random(-150, 150));
+      goto(random(-canvasWidth/2,canvasWidth/2), random(-canvasHeight/2, canvasHeight/2));
       angle(random(0,360));
       spiral(random(100,1000), random(5,90));
    }
 }
 
-function demo(count) {
+function main(count=5) {
    hideTurtle();
    redrawOnMove(false);
    fun(count);

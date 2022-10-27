@@ -28,7 +28,7 @@ function sierpinski(size, level) {
    part ();
 }
 
-function demo() {
+function main() {
    hideTurtle();
    redrawOnMove(false);
    goto(0,-120);

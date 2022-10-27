@@ -85,7 +85,7 @@ function clock() {
    hands(d.getHours(), d.getMinutes(), d.getSeconds());
 }
 
-function demo() {
+function main() {
    hideTurtle();
    // refresh the clock every second
    animate(clock,1000);
