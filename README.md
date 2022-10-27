@@ -13,7 +13,7 @@ The __pen__ also has attributes: *color*, *width*, and *up/down state* (whether 
 JS Turtle is written in JavaScript and it's important to write your code in the proper __syntax__ so that the __interpreter__ can understand what you've written and run the code correctly. __Style__, on the other hand, makes your code easier for humans to read and can help you stay organized and __debug__ (find and remove errors).
 
 ### Syntax
-__Syntax__ are the rules of a programming language and are necessary for your program to run correctly.
+__Syntax__ refers to the rules of a programming language and are necessary for your program to run correctly.
 
 * Every line should end with a semicolon `;` unless a set of curly braces `{}` follows it, as in loops and conditionals.
 * Variable declarations should start with the word `var` like so:
@@ -22,11 +22,31 @@ var foo = 1;
 ```
 * Conditions (expressions that can be evaluated as `true` or `false`) should be enclosed with parenthesis `()` like so:
 ```
-if (x < 2))
+if (x == 2)
 {
-    do_something()
+    doSomething()
 }
 ```
+
+### Style
+__Style__ refers to best practices for organizing your code. It does not affect how the code runs, but is necessary so that your code is easily understandable and so that pesky problems like missing curly braces are more easily found.
+
+* The names of functions and variables should start with a lower-case letter and be written in __lowerCamelCase__.
+* Add white space in between sections (an extra line before and after variable declarations and functions, for instance)
+* Add white space in between operators such as `==` (less than) and `+`.
+* Indent every line that is inside of curly braces.
+#### Example:
+```
+var circleHeight = 8
+function doSomething()
+{
+    if (x == 2)
+    {
+        doSomethingElse()
+    }
+}
+```
+* 
 
 ## Getting started
 Look over the [documentation](documentation.md) and try out the basic movements (`forward`, `left`, `right`, `angle`, `goto`, `colour`, `penup`, `pendown`). You can put these commands directly into the *Command* box or into the *Definitions* box. To run the demo program in the *Definitions* box, run the command `demo()`. You can also load the example scripts by copy/pasting their locations into the *Script* box, pressing *Load Script*, then *Run Script*. You can do this with your own external scripts too, but make sure that you include a function called `main()` because that is the function run when you click *Run Script*.
@@ -39,11 +59,46 @@ Play around and make some designs. Then, try these challenges:
 * Draw a snowman out of three circles: the largest circle sitting on the bottom of the canvas, and two more circles above it, each 3/4 the size of the one below it.
 
 ## Using loops
-A loop in JavaScript looks like this:
+A __for loop__ in JavaScript looks a bit arcane at first:
 ```
+var num = 10;
 for (var i = 0; i < num; i++)
 {
-    do_something();
+    console.log(i);
 }
 ```
-where `num` is the number of times the loop will run
+where `num` is the number of times the loop will run. In this case, the loop will run 10 times and it will print the numbers 0 - 9 to the console.
+
+What's actually happening is:
+* the first statement in parenthesis is run (in this case `var i = 0`) which __initializes__ a variable called i with a __value__ of 0
+* the second statement (a condition) is tested for being true or false.
+* if the statement is true, the code inside the curly braces is run. If not, the loop exits.
+* *After* the code inside the curly braces is run, the third statement runs. In this case, it adds 1 to the value of `i`
+
+A __while loop_ in JavaScript looks like this:
+```
+var x = 0;
+while (x < 10)
+{
+    console.log(x)
+    x++
+}
+```
+which does the same thing as the example above. The condition is tested and as long as it is true, the code inside the curly braces is run.
+
+## Using Conditionals
+A conditional controls the flow of the program by testing some condition and running code if that condition is true.
+
+For example, the following code will print "beep" but not "boop":
+
+```
+var x = 9;
+if (x < 10)
+{
+    console.log("beep");
+}
+if (x > 10)
+{
+    console.log("boop");
+}
+```
