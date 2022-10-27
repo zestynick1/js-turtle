@@ -20,7 +20,7 @@ coordinates
 
 \- point in canvas, in x y
 
-![](turtle_intro.gif)
+![](images/turtle_intro.gif)
 
 ## Basic functions
 
@@ -42,7 +42,7 @@ forward(100)
 
 ###### Result
 
-![](forward.gif)
+![](images/forward.gif)
 
 ### left()
 
@@ -65,7 +65,7 @@ left(90)
 
 ###### Result
 
-![](left.gif)
+![](images/left.gif)
 
 ###### Example 2
 
@@ -79,7 +79,7 @@ left(50)
 
 ###### Result
 
-![](left_2.gif)
+![](images/left_2.gif)
 
 ###### Geometry
 
@@ -91,7 +91,7 @@ You can play with it [here.](https://www.geogebra.org/m/TzAjZFst)
 
 ###### Result
 
-![](angles.gif)
+![](images/angles.gif)
 
 ### right()
 
@@ -126,7 +126,7 @@ forward(100)
 
 ###### Result
 
-![](width.gif)
+![](images/width.gif)
 
 ### goto()
 
@@ -156,7 +156,7 @@ forward(120)
 
 ###### Result
 
-![](goto.gif)
+![](images/goto.gif)
 
 ### colour()
 
@@ -185,7 +185,7 @@ You can [pick colors from here](https://rgbacolorpicker.com/)
 
 ###### Result
 
-![](color_rgb.gif)
+![](images/color_rgb.gif)
 
 
 
@@ -217,7 +217,7 @@ forward(100)
 
 ###### Result
 
-![](penup.gif)
+![](images/penup.gif)
 
 ### clear()
 
