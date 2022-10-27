@@ -1,4 +1,5 @@
 function main()
 {
-    console.log("Hello, world");
+    forward(100);
+    alert("Hello, world");
 }
