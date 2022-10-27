@@ -239,6 +239,14 @@ clear()
 
 Clear all canvas and move the turtle to its starting position and angle.
 
+### getWidth() / getHeight()
+
+Returns the width/height of the canvas
+
+### setWidth() / setHeight()
+
+Sets the width/height of the canvas
+
 ### shape()
 
 Turtle draws a shape, currently supports `"triangle"` (default), `"circle"`, `"square"` and `"turtle"`

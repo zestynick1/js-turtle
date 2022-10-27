@@ -392,3 +392,19 @@ document.querySelector('#command').addEventListener("keypress", function(event) 
   });
 
 reset();
+
+function getWidth(){
+    return document.getElementById('turtlecanvas').width
+}
+
+function getHeight(){
+    return document.getElementById('turtlecanvas').height
+}
+
+function setWidth(w){
+    document.getElementById('turtlecanvas').width = w
+}
+
+function setHeight(h){
+    document.getElementById('turtlecanvas').height = h
+}
