@@ -49,10 +49,14 @@ function doSomething()
 * 
 
 ## Getting started
+Open turtle.html in a browser. You can write and run some code in this page as described below, but it will not be saved. To write a script do so in the myscript.js file, save it, reload turtle.html, then click *Load Script*, then *Run Script*.
+
 Look over the [documentation](documentation.md) and try out the basic movements (`forward`, `left`, `right`, `angle`, `goto`, `colour`, `penup`, `pendown`). You can put these commands directly into the *Command* box or into the *Definitions* box. To run the demo program in the *Definitions* box, run the command `demo()`. You can also load the example scripts by copy/pasting their locations into the *Script* box, pressing *Load Script*, then *Run Script*. You can do this with your own external scripts too, but make sure that you include a function called `main()` because that is the function run when you click *Run Script*.
 
 Play around and make some designs. Then, try these challenges:
 
+* Draw a single shape in each corner of the canvas.
+* Draw a series of rectangles or other shapes inside of each other
 * Draw a triangle whose vertices are in the bottom-left, bottom-right, and top-center of the canvas.
 * Draw circles or other shapes of random sizes and locations all over the canvas.
 * Recreate an 8-bit image like an original Mario sprite.
