@@ -1,31 +1,20 @@
-var min = -getWidth()/2;
-var max =  getHeight()/2;
-function square(side) {
-    for(var i = 0; i < 4; i++){
-       forward(side);
-       right(90);
-    }
- }
-function randomSquares(sideLength, numSquares){
-    for(var i = 0; i < numSquares; i++)
-    {
-        square(50);
-        var xCoord = random(min, max);
-        var yCoord = random(min, max);
-        goto(xCoord, yCoord);
-        square(sideLength);
-    }
-}
-
-
-function main()
-{
-    var sideLength = prompt("side length: ");
-    var numSquares = prompt("number of squares: ")
-    randomSquares(sideLength, numSquares);
-    console.log(turtle.pos);
-    //raise num to the power of expv
-    Math.pow(num, exp);
-    //take the square root of num
-    Math.sqrt(num)
+function main() 
+{ 
+    pendown(); 
+    var sideLength = 150; 
+    var minX = -getWidth()/2 
+    var minY = -getHeight()/2 
+    var maxY = getHeight()/2 
+    var maxX = getWidth()/2
+     goto(minX,maxY); 
+    console.log(turtle.pos); 
+    console.log(sideLength); left(45); 
+    var a = getWidth() 
+    var b = getHeight() 
+    var abSquared = a*a+b*b 
+    var c = Math.sqrt(abSquared); forward(c);
+     goto(maxX,minY); console.log(turtle.pos); 
+     console.log(sideLength); right(90); forward(c); 
+    
+    
 }
